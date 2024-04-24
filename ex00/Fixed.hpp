@@ -13,7 +13,7 @@ class Fixed
 	    Fixed();
         Fixed(const Fixed& other); // copy constructor
 	    
-        Fixed& operator=(const Fixed& rhs);
+        Fixed& operator=(const Fixed& rhs); // copy assignment operator overload
 
         ~Fixed();
 

@@ -6,9 +6,6 @@
 
 class Fixed
 {
-    private:
-        int _value; // fixed-point number value
-        static const int _fracBits = 8; // number of fractional bits
     public:
 	    Fixed();
         Fixed(const Fixed& other); // copy constructor
@@ -19,8 +16,13 @@ class Fixed
 
         int getRawBits( void ) const;
         void setRawBits( int const raw );
+        
         float toFloat( void ) const;
         int toInt( void ) const;
+    
+    private:
+        int _value; // fixed-point number value
+        static const int _fracBits = 8; // number of fractional bits
 };
 
 std::ostream& operator<<(std::ostream& COUT, const Fixed& rhs);

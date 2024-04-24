@@ -60,7 +60,7 @@ float Fixed::toFloat( void ) const
 
 int Fixed::toInt( void ) const
 {
-    return ((_value ^ _fracBits) >> _fracBits);
+    return (_value >> _fracBits);
 }
 
 std::ostream& operator<<(std::ostream& COUT, const Fixed& rhs)
